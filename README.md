@@ -10,3 +10,4 @@
 - created_at: records when the memory was created.
 - updated_at: records when the memory was last changed.
 - id: uniquely identifies each memory.
+- Memory creation converts extracted information into a structured Memory object.
