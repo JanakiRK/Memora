@@ -11,3 +11,11 @@
 - updated_at: records when the memory was last changed.
 - id: uniquely identifies each memory.
 - Memory creation converts extracted information into a structured Memory object.
+
+## Current Capabilities
+
+- Create structured memory objects.
+- Store memories in an in-memory memory store.
+- Retrieve all stored memories.
+- Retrieve a memory by ID.
+- Delete a memory by ID.
