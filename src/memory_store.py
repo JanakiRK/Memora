@@ -22,3 +22,16 @@ class MemoryStore:
             memory for memory in self.memories
             if memory.id != memory_id
         ]
+
+    def search(self, query: str):
+        query = query.strip().lower()
+
+        if not query:
+            return []
+        results = []
+
+        for memory in self.memories:
+            if query.lower() in memory.content.lower():
+                results.append(memory)
+
+        return results
