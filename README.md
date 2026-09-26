@@ -19,3 +19,12 @@
 - Retrieve all stored memories.
 - Retrieve a memory by ID.
 - Delete a memory by ID.
+
+
+## Retrieval
+
+Memora currently supports keyword-based memory retrieval.
+
+- Search is case-insensitive.
+- Leading and trailing spaces are ignored.
+- Empty searches return no results.
