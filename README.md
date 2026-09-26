@@ -28,3 +28,15 @@ Memora currently supports keyword-based memory retrieval.
 - Search is case-insensitive.
 - Leading and trailing spaces are ignored.
 - Empty searches return no results.
+
+## Testing
+
+Memora includes automated tests covering:
+
+- Memory extraction
+- Memory object creation
+- Memory storage
+- Duplicate memory ID protection
+- Memory retrieval/search
+
+Current test result: **5 tests passed**

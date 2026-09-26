@@ -28,10 +28,28 @@ class MemoryStore:
 
         if not query:
             return []
+
+        query_words = query.split()
         results = []
 
         for memory in self.memories:
-            if query.lower() in memory.content.lower():
+            content = memory.content.lower()
+
+            if any(word in content for word in query_words):
                 results.append(memory)
 
         return results
+
+    def add_from_text(self, text: str, memory_id: str):
+        from src.memory import build_memory
+
+        if self.get_by_id(memory_id) is not None:
+            return None
+
+        memory = build_memory(text, memory_id)
+
+        if memory is None:
+            return None
+
+        self.add(memory)
+        return memory
